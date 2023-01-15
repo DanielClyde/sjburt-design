@@ -1,0 +1,67 @@
+@import './fonts.css';
+
+:root {
+  font-family: 'swissl';
+  background-color: #666666;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  margin: 0 auto;
+}
+
+.text-sm {
+  font-size: 22pt;
+}
+
+.text-lg {
+  font-size: 40pt;
+}
+
+.text-med {
+  font-size: 30pt;
+}
+
+@media screen and (max-width: 800px) {
+  .text-sm {
+    font-size: 18pt;
+  }
+  .text-lg {
+    font-size: 30pt;
+  }
+  .text-med {
+    font-size: 22pt;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .text-sm {
+    font-size: 14pt;
+  }
+  .text-lg {
+    font-size: 19pt;
+  }
+  .text-med {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .text-sm {
+    font-size: 12pt;
+  }
+  .text-lg {
+    font-size: 15pt;
+  }
+  .text-med {
+    font-size: 14pt;
+  }
+}

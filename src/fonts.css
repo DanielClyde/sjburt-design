@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'swissck';
+  font-style: normal;
+  src: local('swissck'), url(./assets/fonts/swissck.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'swissl';
+  font-style: normal;
+  src: local('swissl'), url(./assets/fonts/swissl.ttf) format('truetype');
+}
