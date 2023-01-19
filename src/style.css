@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 }
 
+.text-xs {
+  font-size: 16pt;
+}
+
 .text-sm {
   font-size: 22pt;
 }
@@ -31,6 +35,9 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .text-xs {
+    font-size: 14pt;
+  }
   .text-sm {
     font-size: 18pt;
   }
@@ -43,6 +50,9 @@ body {
 }
 
 @media screen and (max-width: 580px) {
+  .text-xs {
+    font-size: 12pt;
+  }
   .text-sm {
     font-size: 14pt;
   }
@@ -55,6 +65,9 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+  .text-xs {
+    font-size: 10pt;
+  }
   .text-sm {
     font-size: 12pt;
   }

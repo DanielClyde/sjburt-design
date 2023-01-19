@@ -12,7 +12,7 @@ onMounted(() => {
   tl.from('#signature', { opacity: 0, y: '-15px', duration: 1 }, 3);
   tl.from('#home-btn', { opacity: 0, duration: 1 }, 3.5);
   tl.from('#contact-info', { opacity: 0, duration: 1 }, 3.5);
-  tl.totalDuration(3.5);
+  tl.totalDuration(4);
   tl.play();
 });
 </script>

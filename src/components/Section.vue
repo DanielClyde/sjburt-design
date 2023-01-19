@@ -2,21 +2,22 @@
 const props = defineProps<{
   theme: 'light' | 'dark';
   topTitle: string;
-  bottomTitle: string;
+  bottomTitle?: string;
+  hideBanner?: boolean;
 }>();
 </script>
 
 <template>
   <div class="section" :class="props.theme">
     <div class="title left">{{ props.topTitle }}</div>
-    <div class="banner-wrapper left">
+    <div v-if="!props.hideBanner" class="banner-wrapper left">
       <div class="left-banner"></div>
     </div>
     <slot name="default"></slot>
-    <div v-if="props.bottomTitle" class="banner-wrapper right">
+    <div v-if="props.bottomTitle && !props.hideBanner" class="banner-wrapper right">
       <div class="right-banner"></div>
     </div>
-    <div class="title right">{{ props.bottomTitle }}</div>
+    <div v-if="props.bottomTitle" class="title right">{{ props.bottomTitle }}</div>
   </div>
 </template>
 
