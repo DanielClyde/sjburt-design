@@ -1,35 +1,64 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 import DesignGallery from './components/DesignGallery.vue';
 import DesignProcess from './components/DesignProcess.vue';
 import LandingSection from './components/LandingSection.vue';
+import Menu from './components/Menu.vue';
 import Section from './components/Section.vue';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollToPlugin);
+});
+
+const showingMenu = ref(false);
+
+function onMenuClose(link?: string) {
+  showingMenu.value = false;
+  if (link) {
+    gsap.to(window, { scrollTo: `#${link}`, delay: .3 });
+  }
+}
 </script>
 
 <template>
   <div>
-    <LandingSection></LandingSection>
+    <LandingSection @menu-click="showingMenu = true"></LandingSection>
     <Section theme="light" top-title="LANDSCAPE DESIGN" bottom-title="DESIGN GALLERY">
-      <div class="landscape-photo">
+      <div id="landscapeDesign" class="landscape-photo">
         <img style="width: 100%" src="./assets/landscaping-house-export.png" />
       </div>
       <DesignProcess></DesignProcess>
     </Section>
     <DesignGallery></DesignGallery>
     <Section theme="light" top-title="GRAPHIC DESIGN" bottom-title="ABOUT">
-      <div class="graphic-design-photo">
+      <div id="graphicDesign" class="graphic-design-photo">
         <img src="./assets/graphic-design-galley.png" />
       </div>
     </Section>
-    <About></About>
+    <About id="about"></About>
     <Section theme="light" :hideBanner="true" top-title="CONTACT">
-      <Contact></Contact>
+      <Contact id="contact"></Contact>
     </Section>
+    <Transition mode="out-in" name="fade">
+      <Menu v-if="showingMenu" @dismiss="onMenuClose"></Menu>
+    </Transition>
   </div>
 </template>
 
 <style scoped lang="scss">
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s ease-out;
+}
 .graphic-design-photo {
   width: 100%;
   text-align: center;

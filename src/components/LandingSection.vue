@@ -15,6 +15,8 @@ onMounted(() => {
   tl.totalDuration(4);
   tl.play();
 });
+
+defineEmits(['menuClick']);
 </script>
 
 <template>
@@ -23,6 +25,7 @@ onMounted(() => {
       id="home-btn"
       src="../assets/home-btn.svg"
       class="menu-button"
+      @click="$emit('menuClick')"
     />
     <svg
       class="logo"

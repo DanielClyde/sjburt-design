@@ -21,7 +21,7 @@
 .invisible {
   color: transparent;
   opacity: 0;
-  width: 30%;
+  min-width: 30%;
 }
 .contact-section {
   padding: 20px;
