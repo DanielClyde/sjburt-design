@@ -29,7 +29,7 @@
   background-color: #666666;
   width: 100%;
   overflow-x: auto;
-  margin-bottom: 30px;
+  margin: 18px 0px;
   height: 750px;
   display: grid;
   grid-template-rows: 1.2fr 1fr;

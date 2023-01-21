@@ -149,4 +149,13 @@ defineEmits(['menuClick']);
     }
   }
 }
+
+@media screen and (max-width: 880px) {
+  .landing-section {
+    .menu-button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
 </style>

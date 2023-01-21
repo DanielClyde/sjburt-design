@@ -43,16 +43,16 @@ $text-sizes: (
 $top-text-offset: (
   'large': -11pt,
   'medium': -6.25pt,
-  'small': -4.75pt,
-  'xsmall': -3pt,
-  'xxs': -2pt
+  'small': -5.0pt,
+  'xsmall': -4pt,
+  'xxs': -3pt
 );
 $bottom-text-offset: (
   'large': calc(-12pt - 3px),
   'medium': calc(-6.25pt - 3px),
-  'small': calc(-3.75pt - 3px),
-  'xsmall': calc(-3pt - 3px),
-  'xxs': calc(-2pt - 3px),
+  'small': calc(-4pt - 3px),
+  'xsmall': calc(-3.5pt - 3px),
+  'xxs': calc(-3pt - 3px),
 );
 .title {
   font-size: map-get($map: $text-sizes, $key: 'large');
